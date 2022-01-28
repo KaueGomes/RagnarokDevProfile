@@ -1,0 +1,179 @@
+/*Configuracao do Cursor do site e das barras das caixas*/
+.Corpo{
+    cursor: url('/img/UI/Cursor.png'),auto;
+    cursor: url('/img/UI/Click.png'),grab;
+    cursor: url('/img/UI/Click.png'),grabbing;
+    cursor: url('/img/UI/Cursor.png'),pointer;
+    font-style: arial;
+}
+#SimpleButton{
+    position:absolute;
+    margin: 4px;
+}
+/*Posicao dos containeres principais*/
+#BoxDeCima{
+    display:inline-flex;
+}
+#AvatarBox{
+    display: inline-block;
+    padding-right: 10px;
+}
+#StatusImagem{
+    display: inline-block;
+    padding-right: 5px;
+}
+#Status{
+    width: 614px;
+    height: 240px;
+    position:absolute;
+}
+#Skills{
+    display: inline-block;
+    position: absolute;
+    border: 1px solid #c5c6c8;
+    border-radius: 5px;
+    height: 510px;
+}
+
+/*Configuracao da caixa do personagem*/
+
+#BarraPersonagem{
+    height: 17px;
+    width: 202px;
+    display: flex;
+    top: auto;
+}
+
+#AvatarClass{
+    font-family: arial;
+    position: absolute; 
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0px;
+    padding: 0px;
+    top: 20px;
+    left: 17px;
+    line-height: 0px;
+}
+#NomePersonagem{
+    color: #2a3a51;
+    font-weight: bold;
+}
+#ClassTexto{
+    color: #2a3a51;
+    font-weight: bold;
+}
+.Personagem{
+    border: 1px solid #c5c6c8;
+    border-radius: 3px;
+    border-top: none;
+    display:none;
+}
+#SlidePersonagem{
+    vertical-align: middle;
+}
+#SetaEsquerda{
+    position: absolute;
+    border: solid black;
+    border-width: 0px 3px 3px 0px;
+    display:inline-block;
+    padding:3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    top: 260px;
+    left: 40px
+}
+#SetaDireita{
+    position: absolute;
+    border: solid black;
+    border-width: 0px 3px 3px 0px;
+    display:inline-block;
+    padding:3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: 260px;
+    left: 170px
+}
+
+/*Configuracao da caixa do grafico*/
+#BarraGrafico{
+    width: 402px;
+    height: 17px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+#StatusGraph{
+    display: flexbox;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+#Grafico{
+    width: 400px;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #c5c6c8;
+    border-radius: 3px;
+    border-top: none;
+}
+
+/*Configuracoes da caixa de Status*/
+
+#GridStatus{
+    list-style-type: none;
+    padding: 14px;
+    padding-left: 30px;
+    position: absolute;
+    top: 2px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/*Valores base que compoe o grafico e outras contas*/
+#StatusBase{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#valorStatusBase {
+    margin-left: 40px;
+    margin-right: 15px;
+}
+#valorStatusBase p{
+    border: 1px solid #c5c6c8;
+    padding-left: 50px;
+}
+#nomeStatusBase {
+    color: #2a3a51;
+    font-weight: bold;
+}
+#nomeStatusBase p{
+    border: 1px solid white;
+}
+
+/*Restante dos status que vai ser o resultado da equação*/
+#devEmTStatus{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#Status p{
+    font-size: 14px;
+    font-family: arial;
+}
+
+/*Configuracoes da janela de skills*/
+
+#Skills li{
+    list-style-type:none;
+}
+#BarraDeSkill{
+    width: 600px;
+    height: 17px;
+}
+
+.iconeSkill{
+    width: 36px;
+    height: 36px;
+}

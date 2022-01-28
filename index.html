@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head lang="pt-br">
+    <meta charset="UTF-8">
+    <title>Curriculo Kaue Gomes</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/grafico.js"></script>
+</head>
+<body class="Corpo" onmousedown="change()" onmouseup="changeback()" ondragstart="return false" ondrop="return false">
+    <div id="BoxDeCima">
+        <div id="AvatarBox">
+            <img id="SimpleButton" src="/img/UI/SimpleButton.png"></img>
+            <img id="BarraPersonagem"src='/img/UI/Barra.png'></img>
+            <div>
+                <div id="AvatarClass">
+                    <p id="NomePersonagem">Nome:</p>
+                    <p>Kaue Gomes</p>
+                    <p id="ClassTexto">Classe:</p>
+                    <p>Dev Junior</p>
+                </div>
+                <i id="SetaEsquerda" onclick="plusSlides(-1)"></i>
+                    <div id="SlidePersonagem">
+                        <img class="Personagem" src='/img/Char/FrenteDireita.png'></img>
+                        <img class="Personagem" src='/img/Char/Direita.png'></img>
+                        <img class="Personagem" src='/img/Char/DireitaCima.png'></img>
+                        <img class="Personagem" src='/img/Char/Cima.png'></img>
+                        <img class="Personagem" src='/img/Char/EsquerdaCima.png'></img>
+                        <img class="Personagem" src='/img/Char/Esquerda.png'></img>
+                        <img class="Personagem" src='/img/Char/FrenteEsquerda.png'></img>
+                        <img class="Personagem" src='/img/Char/Frente.png'></img>
+                    </div>
+                <i id="SetaDireita" onclick="plusSlides(1)"></i>
+            </div>
+        </div>
+        <div id="StatusImagem">
+            <img id="SimpleButton" src="/img/UI/SimpleButton.png"></img>
+            <img id="BarraGrafico" src="img/UI/Barra.png">
+            <div id="Grafico"></div>
+        </div>
+    </div>
+    <div id="Status">
+        <img id="SimpleButton" src="/img/UI/SimpleButton.png"></img>
+        <img src="img/UI/StatusBar.png">
+        <div id="GridStatus">
+            <div id="StatusBase">
+                <li id="nomeStatusBase">
+                    <p>Estrutura de dados</p>
+                    <p>Debbugging</p>
+                    <p>Versionamento</p>
+                    <p>Algoritmo e resolução</p>
+                    <p>Sql e Querries</p>
+                    <p>Conhecimento Web</p>
+                </li>
+                <li id="valorStatusBase">
+                    <p id="EstruturaDeDadosValor">10</p>
+                    <p id="DebbugingValor">20</p>
+                    <p id="VersionamentoValor">30</p>
+                    <p id="AlgoritmoValor">40</p>
+                    <p id="QuerriesValor">50</p>
+                    <p id="FrontEndValor">60</p>
+                </li>
+            </div>
+            <div id="devEmTStatus">
+                <li id="nomeStatusBase">
+                    <p>Mobile</p>
+                    <p>DevOps</p>
+                    <p>Programação</p>
+                    <p>Front-End</p>
+                    <p>UX</p>
+                    <p>Data-Science</p>
+                </li>
+                <li id="valorStatusBase">
+                    <p>45</p>
+                    <p>65</p>
+                    <p>65</p>
+                    <p>65</p>
+                    <p>65</p>
+                    <p>65</p>
+                </li>
+            </div>
+            <p id="GuildText" style='margin-top:0px;font-weight: bold;color:#2a3a51;text-align: center;'>Guilda:</p><p id="GuildAnswer" style="margin-top:0px;text-align: center;">Cognizant</p>
+        </div>
+    </div>
+    <div id="Skills">
+        <img id="SimpleButton" src="img/UI/SimpleButton.png">
+        <img id="BarraDeSkill" src="img/UI/SkillBar.png">
+        <div id="ContainerSkill">
+            <img class="iconeSkill" src='/img/Skills/SkillPython.jpg'>
+            <img class="iconeSkill" src='/img/Skills/SkillJavascript.jpeg'>
+            <img class="iconeSkill" src='/img/Skills/SkillUnity.jpg'>
+        </div>
+    </div>
+    <img id="poring" src='/img/poring-ragnarok.gif'></img>
+    <script type="text/javascript" src="/js/slideshow.js"></script>
+</body>
