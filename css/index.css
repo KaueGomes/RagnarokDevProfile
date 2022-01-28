@@ -1,9 +1,9 @@
 /*Configuracao do Cursor do site e das barras das caixas*/
 .Corpo{
-    cursor: url('/img/UI/Cursor.png'),auto;
-    cursor: url('/img/UI/Click.png'),grab;
-    cursor: url('/img/UI/Click.png'),grabbing;
-    cursor: url('/img/UI/Cursor.png'),pointer;
+    cursor: url('img/UI/Cursor.png'),auto;
+    cursor: url('img/UI/Click.png'),grab;
+    cursor: url('img/UI/Click.png'),grabbing;
+    cursor: url('img/UI/Cursor.png'),pointer;
     font-style: arial;
 }
 #SimpleButton{
