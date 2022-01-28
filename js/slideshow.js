@@ -13,7 +13,10 @@ function showSlides(n){
     let i;
     let slides = document.getElementsByClassName('Personagem');
     if (n> slides.length){
-        slideIndex=1
+        slideIndex=1;
+    }
+    if (n<1){
+        slideIndex=slide.length;
     }
     for(i=0;i<slides.length;i++){
         slides[i].style.display = "none";
