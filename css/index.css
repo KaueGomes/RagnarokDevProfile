@@ -1,10 +1,12 @@
 /*Configuracao do Cursor do site e das barras das caixas*/
-.Corpo{
+html{
     cursor: url('img/UI/Cursor.png'),auto;
-    cursor: url('img/UI/Click.png'),grab;
-    cursor: url('img/UI/Click.png'),grabbing;
-    cursor: url('img/UI/Cursor.png'),pointer;
-    font-style: arial;
+    margin:0px;
+    height: 100%;
+}
+body{
+    margin: 0px;
+    height: 100%;
 }
 #SimpleButton{
     position:absolute;
@@ -81,7 +83,7 @@
     padding:3px;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    top: 260px;
+    top: 250px;
     left: 40px
 }
 #SetaDireita{
@@ -92,7 +94,7 @@
     padding:3px;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    top: 260px;
+    top: 250px;
     left: 170px
 }
 
@@ -172,8 +174,63 @@
     width: 600px;
     height: 17px;
 }
-
 .iconeSkill{
     width: 36px;
     height: 36px;
+}
+#ContainerSkill{
+    margin: 0px;
+    width: auto;
+    height: 460px;
+    padding: 15px 30px 15px 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+.emptyBox{
+    width: 36px;
+    height: 36px;
+}
+.skillBox{
+    text-align: center;
+    position: relative;
+}
+.emptySkill{
+    text-align: center;
+}
+.skillText{
+    font-family: arial;
+    font-size: 12px;
+    color: #adadad;
+    line-height: 0px;
+}
+.emptyText{
+    font-family: Arial;
+    font-size: 12px;
+    color: #adadad;
+    line-height: 0px;
+}
+#poring{
+    position:absolute;
+    display:block;
+    right:0px;
+    bottom:0px;
+}
+.descricaoPython{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    visibility:hidden;
+    opacity: 0;
+    z-index: 1;
+    margin: 0px;
+}
+.hoverPython{
+    display:contents;
+}
+.hoverPython:hover .descricaoPython{
+    visibility: visible;
+    opacity: 1;
 }
