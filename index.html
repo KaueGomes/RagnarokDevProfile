@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <head lang="pt-br">
     <meta charset="UTF-8">
-    <title>Curriculo Kaue Gomes</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/grafico.js"></script>
 </head>
 <body class="Corpo" onmousedown="change()" onmouseup="changeback()" ondragstart="return false" ondrop="return false">
     <div id="BoxDeCima">
-        <div id="AvatarBox">
+        <div>
             <img id="SimpleButton" src="img/UI/SimpleButton.png"></img>
             <img id="BarraPersonagem"src='img/UI/Barra.png'></img>
-            <div>
+            <div id="AvatarBox">
                 <div id="AvatarClass">
                     <p id="NomePersonagem">Nome:</p>
                     <p>Kaue Gomes</p>
                     <p id="ClassTexto">Classe:</p>
-                    <p>Dev Junior</p>
+                    <p>Dev</p>
                 </div>
                 <i id="SetaEsquerda" onclick="plusSlides(-1)"></i>
-                    <div id="SlidePersonagem">
+                    <div id="PersonagemBox">
                         <img class="Personagem" src='img/Char/FrenteDireita.png'></img>
                         <img class="Personagem" src='img/Char/Direita.png'></img>
                         <img class="Personagem" src='img/Char/DireitaCima.png'></img>
@@ -42,10 +42,10 @@
     </div>
     <div id="Status">
         <img id="SimpleButton" src="img/UI/SimpleButton.png"></img>
-        <img src="img/UI/StatusBar.png">
+        <img id="BarraStatus" src="img/UI/StatusBar.png">
         <div id="GridStatus">
             <div id="StatusBase">
-                <li id="nomeStatusBase">
+                <li id="nomeStatus">
                     <p>Estrutura de dados</p>
                     <p>Debbugging</p>
                     <p>Versionamento</p>
@@ -53,17 +53,17 @@
                     <p>Sql e Querries</p>
                     <p>Conhecimento Web</p>
                 </li>
-                <li id="valorStatusBase">
-                    <p id="EstruturaDeDadosValor">10</p>
-                    <p id="DebbugingValor">20</p>
-                    <p id="VersionamentoValor">30</p>
-                    <p id="AlgoritmoValor">40</p>
-                    <p id="QuerriesValor">50</p>
-                    <p id="FrontEndValor">60</p>
+                <li id="valorStatus">
+                    <p id="EstruturaDeDadosValor">45</p>
+                    <p id="DebbugingValor">35</p>
+                    <p id="VersionamentoValor">20</p>
+                    <p id="AlgoritmoValor">60</p>
+                    <p id="QuerriesValor">30</p>
+                    <p id="FrontEndValor">50</p>
                 </li>
             </div>
             <div id="devEmTStatus">
-                <li id="nomeStatusBase">
+                <li id="nomeStatus">
                     <p>Mobile</p>
                     <p>DevOps</p>
                     <p>Programação</p>
@@ -71,223 +71,262 @@
                     <p>UX</p>
                     <p>Data-Science</p>
                 </li>
-                <li id="valorStatusBase">
-                    <p>45</p>
-                    <p>65</p>
-                    <p>65</p>
-                    <p>65</p>
-                    <p>65</p>
-                    <p>65</p>
+                <li id="valorStatus">
+                    <p>10</p>
+                    <p>25</p>
+                    <p>70</p>
+                    <p>60</p>
+                    <p>35</p>
+                    <p>15</p>
                 </li>
             </div>
-            <p id="GuildText" style='margin-top:0px;font-weight: bold;color:#2a3a51;text-align: center;'>Guilda:</p><p id="GuildAnswer" style="margin-top:0px;text-align: center;">Cognizant</p>
+            <p id="GuildText">Guilda:</p>
+            <p id="GuildAnswer">Cognizant</p>
         </div>
     </div>
     <div id="Skills">
         <img id="SimpleButton" src="img/UI/SimpleButton.png">
         <img id="BarraDeSkill" src="img/UI/SkillBar.png">
         <div id="ContainerSkill">
-            <div class='skillBox' id="pythonSkill">
+            <!--Skill de Python-->
+            <div class='skillBox'>
                 <div class='hoverPython'>
+                    <p id="TituloSkill">Python</p>
                     <img class="iconeSkill" src='img/Skills/SkillPython.jpg'>
-                    <div class='descricaoPython' style="width: 250px;height: 100px;position: absolute;font-family: arial;font-size: 12px;text-align: left;border-radius: 5px;border: 1px solid #c5c6c8;background-color: white;color: #adadad;">
-                        <p style="text-align: center;">Habilidade em Python</p>
-                        <p>Teste daqueles longos para ver se aparece entre as imagens</p>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em Python</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Possuo conhecimento de pratica em que ja escrevi alguns scripts para rodar no Linux,
+                            costumo ainda estudar sobre a linguagem e como funciona, ainda com interesse em me desenvolver para Data-Science</p>
+                        </div>
                     </div>
                 </div>              
-                <p class="skillText">1/10</p>
+                <p class="ValorSkill">6/10</p>
             </div>
+            <!--Skill de Unity-->
             <div class='skillBox'>
-                <img class="iconeSkill" src='img/Skills/SkillJavascript.jpeg'>
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">Unity</p>
+                    <img class="iconeSkill" src='img/Skills/SkillUnity.jpg'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em Unity Engine</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento da Engine Unity</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">4/10</p>
             </div>
+            <!--Skill Javascript-->
             <div class='skillBox'>
-                <img class="iconeSkill" src='img/Skills/SkillUnity.jpg'>
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">Javascript</p>
+                    <img class="iconeSkill" src='img/Skills/SkillJavascript.jpeg'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em Javascript</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento de Javascript</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">6/10</p>
             </div>
+            <!--Skill Database-->
             <div class='skillBox'>
-                <img class="iconeSkill" src="img/Skills/SkillBash.jpg">
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">SQL</p>
+                    <img class="iconeSkill" src='img/Skills/SkillDatabase.jpg'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em SQL</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento da linguagem SQL e querries</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">3/10</p>
             </div>
+            <!--Skill Bash-->
             <div class='skillBox'>
-                <img class="iconeSkill" src="img/Skills/SkillDatabase.jpg">
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">Bash</p>
+                    <img class="iconeSkill" src='img/Skills/SkillBash.jpg'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em Bash Script</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento de Bash</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">3/10</p>
             </div>
+            <!--Skill Git-->
             <div class='skillBox'>
-                <img class="iconeSkill" src="img/Skills/SkillGit.jpg">
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">Git</p>
+                    <img class="iconeSkill" src='img/Skills/SkillGit.jpg'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em Versionamento</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento da utilização do git e suas ferramentas</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">2/10</p>
             </div>
+            <!--Skill React-->
             <div class='skillBox'>
-                <img class="iconeSkill" src="img/Skills/SkillReact.png">
-                <p class="skillText">1/10</p>
+                <div class='hoverPython'>
+                    <p id="TituloSkill">React</p>
+                    <img class="iconeSkill" src='img/Skills/SkillReact.png'>
+                    <div class='descricaoPython'>
+                        <p>Habilidades em React</p>
+                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
+                            <p>Nível máximo:</p>
+                            <p style='color:#7c7c7c'>10</p>
+                        </div>
+                        <div id='DescricaoSkills'>
+                            <p>Descrição:</p>
+                            <p style='color:#7c7c7c'>Conhecimento de React</p>
+                        </div>
+                    </div>
+                </div>              
+                <p class="ValorSkill">6/10</p>
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <!--Empty box-->
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
-            </div>
-            <div class='emptySkill'>
-                <img class="emptyBox" src="img/UI/emptyBox.png">
-                <p class="emptyText"></p>
+            <div class="skillBox">
+                <img class="iconeSkill" src="/img/UI/emptyBox.png" width="36px" height="36px">
             </div>
         </div>
         <img id="poring" src='img/poring-ragnarok.gif'>
