@@ -12,6 +12,12 @@ body{
     height: 100%;
 }
 
+#page-container{
+    position: relative;
+    width: 650px;
+    margin: 0 auto;
+}
+
 /*##################################################################*/
 /*Configuracao do topo das divs*/
 /*##################################################################*/
