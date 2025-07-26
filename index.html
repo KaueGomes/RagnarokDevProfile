@@ -1,245 +1,51 @@
 <!DOCTYPE html>
-<head lang="pt-br">
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevRagnarok</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/grafico.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKV3B3BFDF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RKV3B3BFDF');
-    </script>
+    <link rel="stylesheet" href="components/css/index.css">
+    <script type="text/javascript" src="components/js/slideshow.js"></script>
+    <script type="text/javascript" src="components/js/index.js"></script>
+    <script type="text/javascript" src="components/js/grafico.js"></script>
+    <script type="text/javascript" src="components/js/poring-float.js"></script>
 </head>
-<body class="Corpo" onmousedown="change()" onmouseup="changeback()" ondragstart="return false" ondrop="return false" onselect="return false">
-    <div id="page-container">
-    <div id="BoxDeCima">
-        <div>
-            <img id="SimpleButton" src="img/UI/SimpleButton.png"></img>
-            <img id="BarraPersonagem"src='img/UI/Barra.png'></img>
-            <div id="AvatarBox">
-                <div id="AvatarClass">
-                    <p id="NomePersonagem">Nome:</p>
-                    <p>Kaue Gomes</p>
-                    <p id="ClassTexto">Classe:</p>
-                    <p>Dev</p>
+<body>
+    <div class="main-div">
+        <div class="left-div">
+            <div class="top-div">
+                <div class="character-div">
+                    <div class="character-info">
+                        <p class="character-name"><span class="system">Nome:</span> <span class="info">Kaue Gomes</span></p>
+                    </div>
+                    <div class="character-box">
+                        <div id="sj" class="slideshow-box">
+                            <img id="personagem-img" class="Personagem" src="components/img/Char/Frente.png" alt="Personagem">
+                            <div class="slide-btn-container">
+                                <button class="slide-btn left" onclick="plusSlides(-1)" aria-label="Girar para a esquerda">&#8592;</button>
+                                <button class="slide-btn right" onclick="plusSlides(1)" aria-label="Girar para a direita">&#8594;</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <i id="SetaEsquerda" onclick="plusSlides(-1)"></i>
-                    <div id="PersonagemBox">
-                        <img class="Personagem" src='img/Char/FrenteDireita.png'></img>
-                        <img class="Personagem" src='img/Char/Direita.png'></img>
-                        <img class="Personagem" src='img/Char/DireitaCima.png'></img>
-                        <img class="Personagem" src='img/Char/Cima.png'></img>
-                        <img class="Personagem" src='img/Char/EsquerdaCima.png'></img>
-                        <img class="Personagem" src='img/Char/Esquerda.png'></img>
-                        <img class="Personagem" src='img/Char/FrenteEsquerda.png'></img>
-                        <img class="Personagem" src='img/Char/Frente.png'></img>
-                    </div>
-                <i id="SetaDireita" onclick="plusSlides(1)"></i>
+                <div class="chart-div">
+                    <canvas id="chart-radar"></canvas>
+                </div>
+            </div>
+            <div class="bottom-div">
+                <div class="status-div">
+                    <!-- Status do personagem aqui -->
+                </div>
             </div>
         </div>
-        <div id="StatusImagem">
-            <img id="SimpleButton" src="img/UI/SimpleButton.png"></img>
-            <img id="BarraGrafico" src="img/UI/Barra.png">
-            <div id="Grafico"></div>
+        <div class="right-div">
+            <div class="skill-div">
+                <!-- Habilidades do personagem aqui -->
+            </div>
         </div>
     </div>
-    <div id="Status">
-        <img id="SimpleButton" src="img/UI/SimpleButton.png"></img>
-        <img id="BarraStatus" src="img/UI/StatusBar.png">
-        <div id="GridStatus">
-            <div id="StatusBase">
-                <li id="nomeStatus">
-                    <p>Estrutura de dados</p>
-                    <p>Debbugging</p>
-                    <p>Versionamento</p>
-                    <p>Algoritmo e resolução</p>
-                    <p>Sql e Querries</p>
-                    <p>Conhecimento Web</p>
-                </li>
-                <li id="valorStatus">
-                    <p id="EstruturaDeDadosValor">45</p>
-                    <p id="DebbugingValor">35</p>
-                    <p id="VersionamentoValor">20</p>
-                    <p id="AlgoritmoValor">60</p>
-                    <p id="QuerriesValor">30</p>
-                    <p id="FrontEndValor">50</p>
-                </li>
-            </div>
-            <div id="devEmTStatus">
-                <li id="nomeStatus">
-                    <p>Mobile</p>
-                    <p>DevOps</p>
-                    <p>Programação</p>
-                    <p>Front-End</p>
-                    <p>UX</p>
-                    <p>Data-Science</p>
-                </li>
-                <li id="valorStatus">
-                    <p>10</p>
-                    <p>25</p>
-                    <p>70</p>
-                    <p>60</p>
-                    <p>35</p>
-                    <p>15</p>
-                </li>
-            </div>
-            <p id="GuildText">Guilda:</p>
-            <p id="GuildAnswer">Cognizant</p>
-        </div>
-    </div>
-    <div id="Skills">
-        <img id="SimpleButton" src="img/UI/SimpleButton.png">
-        <img id="BarraDeSkill" src="img/UI/SkillBar.png">
-        <div id="ContainerSkill">
-            <!--Skill de Python-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">Python</p>
-                    <img class="iconeSkill" src='img/Skills/SkillPython.jpg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em Python</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Minha linguagem favorita, ja criei uma assistente virtual, fiz uma ferramenta para checar a integridade de arquivos em uma antiga empresa
-                            em que trabalhei, gosto de estudar no tempo livre por hobbie e tenho muito interesse em machine learning e Data-Science.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">6/10</p>
-            </div>
-            <!--Skill de Unity-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">Unity</p>
-                    <img class="iconeSkill" src='img/Skills/SkillUnity.jpg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em Unity Engine</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Meu objetivo, sou extremamente apaixonado pelo mundo dos games, ja ingressei na faculdade de jogos. Na epoca interagi mais com jogos 2D voltado para
-                            windows, programando em C# os movimentos de personagem, paralax do cenario, entre outras funcionalidades. Meu objetivo é me direcionar cada vez mais para a área.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">4/10</p>
-            </div>
-            <!--Skill Javascript-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">Javascript</p>
-                    <img class="iconeSkill" src='img/Skills/SkillJavascript.jpeg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em Javascript</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Minha linguagem mais usada atualmente, no meu trabalho atual utilizo javascript para instalar codigos personalizados nos sites de clientes,
-                            para integrar as ferramentas do Google Analytics, Google Ads e Merchant Center.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">6/10</p>
-            </div>
-            <!--Skill Database-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">SQL</p>
-                    <img class="iconeSkill" src='img/Skills/SkillDatabase.jpg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em SQL</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Ja trabalhei fazendo consultas e alterando algumas informações dentro de tabelas em empregos anteriores, criei alguns bancos para mim mesmo por
-                            curiosidade de como funciona e buscando como aprimorar meu conhecimento para fazer boas queries</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">3/10</p>
-            </div>
-            <!--Skill Bash-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">Bash</p>
-                    <img class="iconeSkill" src='img/Skills/SkillBash.jpg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em Bash Script</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Utilizo Linux há um bom tempo, por querer simplificar as minhas rotinas com a plataforma, costuma fazer alguns scripts simples para facilitar instalações,
-                            principalmente quando formato o sistema ou realizo alguma mudanca que precise que eu execute o mesmo comando repetidamente.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">3/10</p>
-            </div>
-            <!--Skill Git-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">Git</p>
-                    <img class="iconeSkill" src='img/Skills/SkillGit.jpg'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em Versionamento</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Estou aprendendo a utilizar o git via terminal e a me acostumar com ele, como havia apenas desenvolvido soluções pessoais na maior parte do tempo,
-                             nunca havia sentido a necessidade do controle de versões, mas por ser um conhecimento essencial estou estudando mais afundo e me habituando a usar o git.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">2/10</p>
-            </div>
-            <!--Skill React-->
-            <div class='skillBox'>
-                <div class='hoverPython'>
-                    <p id="TituloSkill">React</p>
-                    <img class="iconeSkill" src='img/Skills/SkillReact.png'>
-                    <div class='descricaoPython'>
-                        <p>Habilidades em React</p>
-                        <div id="NivelMax" style="display: flex;justify-content: left; margin: 0px;">
-                            <p>Nível máximo:</p>
-                            <p style='color:#7c7c7c'>10</p>
-                        </div>
-                        <div id='DescricaoSkills'>
-                            <p>Descrição:</p>
-                            <p style='color:#7c7c7c'>Procurei conhecer um pouco por pura curiosidade no inicio, tenho gostado da forma em que a tecnologia trabalha e tenho me interessado por fazer um projeto
-                            costumo procurar como funciona para fazer sites com interfaces mais bem elaboradas, porem, ainda continuo estudando e ainda não realizei meu primeiro projeto.</p>
-                        </div>
-                    </div>
-                </div>              
-                <p class="ValorSkill">3/10</p>
-            <!--Empty box-->
-        </div>
-        <img id="poring" src='img/poring-ragnarok.gif'>
-    </div>
-    <script type="text/javascript" src="js/slideshow.js"></script>
+    <div class="poring-float">
+        <img src="components/img/poring-ragnarok.gif" alt="Poring Ragnarok">
     </div>
 </body>
+</html>

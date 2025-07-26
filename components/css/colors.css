@@ -1,0 +1,18 @@
+:root {
+    --ro-azul-claro: #C6E6FB;
+    --ro-azul-cristal: #A8D0F0;
+    --ro-azul-ui: #7DB5DA;
+    --ro-azul-escuro: #3C7FA6;
+    --ro-azul-profundo: #24556E;
+    --ro-branco-gelo: #F2F8FC;
+    --ro-cinza-azulado: #D9E4EF;
+    --ro-bege-tooltip: #F7F3E8;
+    --ro-dourado-xp: #FFD449;
+    --ro-vermelho-erro: #F25C54;
+    --ro-cinza-claro:    #E4E4E4; /* Textos passivos, desabilitados */
+    --ro-cinza-normal:   #C0C0C0; /* Texto padrão de sistema, falas de NPC */
+    --ro-cinza-medio:    #A0A0A0; /* Tooltips, descrição de item */
+    --ro-cinza-escuro:   #707070; /* Borda de botão desabilitado */
+    --ro-cinza-profundo: #4A4A4A; /* Cabeçalhos de janela, destaque */
+    --ro-quase-preto:    #2A2A2A; /* Alerta, texto mais escuro possível */
+  }
