@@ -6,10 +6,10 @@ function positionPoring() {
   const mainRect = mainDiv.getBoundingClientRect();
   const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const offset = 8;
 
-  poring.style.left = (mainRect.right + scrollLeft - poring.offsetWidth - offset) + 'px';
-  poring.style.top = (mainRect.bottom + scrollTop - poring.offsetHeight - offset) + 'px';
+  // Alinha o CENTRO do poring com o canto inferior direito da main-div
+  poring.style.left = (mainRect.right + scrollLeft - poring.offsetWidth / 2) + 'px';
+  poring.style.top = (mainRect.bottom + scrollTop - poring.offsetHeight / 2) + 'px';
 }
 
 window.addEventListener('resize', positionPoring);
